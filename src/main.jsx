@@ -4,16 +4,21 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Creators from './Components/Creators/Creators.jsx'
+import Map from './Components/Map/Map.jsx'
 const router = createBrowserRouter([
   {
     path:"/",
     element:<App/>,
     children:[
       {
-        path:"/",
+        path:"/creators",
         element:<Creators/>,
         loader: () => fetch("../creator.json") 
-      }
+      },
+      {
+        path:"/map",
+        element:<Map/>,
+      },
     ]
   },
 
