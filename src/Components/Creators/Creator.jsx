@@ -1,7 +1,10 @@
 
-const Creator = () => {
+const Creator = ({creator}) => {
+    console.log(creator);
+    
+
   return (
-    <div>Creator</div>
+    <div></div>
   )
 }
 
